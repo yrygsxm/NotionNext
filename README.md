@@ -1,194 +1,145 @@
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/c111204d-2016-4343-92e4-83357cac4b19" width="96" height="96" alt="NotionNext Logo" />
+# APPDO 数字生活指南
 
-# NotionNext
+### APPDO 品牌介绍与合作信息网站
 
-用 Notion 搭建自己的独立站
+记录数字世界的变化，分享值得关注的产品、服务与互联网故事。
 
-继续在 Notion 写作，一键发布为博客、作品集、知识库、导航站或产品官网。
-
-<p>
-  <a href="https://preview.tangly1024.com/">在线预览</a>
-  ·
-  <a href="https://notionnext.tangly1024.com/user-guide/start-here">开始搭建</a>
-  ·
-  <a href="https://notionnext.tangly1024.com/user-guide/themes/THEMES_CATALOG">主题全览</a>
-  ·
-  <a href="https://notionnext.tangly1024.com/">文档站</a>
-  ·
-  <a href="https://github.com/notionnext-org/NotionNext/discussions">讨论区</a>
-</p>
-
-<p>
-  <a aria-label="GitHub commit activity" href="https://github.com/notionnext-org/NotionNext/commits/main" title="GitHub commit activity">
-    <img src="https://img.shields.io/github/commit-activity/m/notionnext-org/NotionNext?style=for-the-badge"/>
-  </a>
-  <a aria-label="GitHub contributors" href="https://github.com/notionnext-org/NotionNext/graphs/contributors" title="GitHub contributors">
-    <img src="https://img.shields.io/github/contributors/notionnext-org/NotionNext?color=orange&style=for-the-badge"/>
-  </a>
-  <a aria-label="Build status" href="#" title="Build status">
-    <img src="https://img.shields.io/github/deployments/notionnext-org/NotionNext/Production?logo=Vercel&style=for-the-badge"/>
-  </a>
-  <a aria-label="Powered by Vercel" href="https://vercel.com?utm_source=Craigary&utm_campaign=oss" title="Powered by Vercel">
-    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" height="28"/>
-  </a>
-</p>
-
-中文 | [English](./README_EN.md)
+[主网站](https://appdo.xyz/) · [关于 APPDO / 商务合作](https://about.appdo.xyz/) 
 
 </div>
 
 ---
 
-## NotionNext 是什么？
+## 项目介绍
 
-NotionNext 是一个基于 **Next.js + Notion API** 的开源站点系统。你继续用 Notion 管理文章、分类、标签、菜单和页面，NotionNext 负责把这些内容发布成可访问、可搜索、可运营的独立网站。
+这是 **APPDO 数字生活指南** 的品牌介绍与商务合作网站，主要用于展示 APPDO 的品牌定位、发展历程、内容方向、频道数据、合作案例及联系方式。
 
-它适合想长期沉淀内容的人：内容创作者、独立开发者、设计师、摄影师、课程作者、开源项目维护者，以及需要快速搭建产品官网或知识库的小团队。
+本网站基于开源博客与网站框架 **NotionNext** 搭建，使用 Notion 作为内容管理后台，并通过 GitHub 和 Vercel 完成代码管理与网站部署。
 
-## 你可以用它做什么？
+本仓库公开网站相关代码及配置，供学习、交流和二次开发使用。
 
-| 目标 | 推荐入口 | 适合人群 |
-| --- | --- | --- |
-| 搭个人博客 | [从这里开始](https://notionnext.tangly1024.com/user-guide/start-here) | 内容创作者、独立开发者、学生 |
-| 做作品集或个人品牌站 | [按场景选主题](https://notionnext.tangly1024.com/user-guide/themes/THEMES_CATALOG#按场景选主题) | 设计师、摄影师、自由职业者 |
-| 做产品官网或 SaaS 落地页 | [Starter / Landing / Proxio](https://notionnext.tangly1024.com/user-guide/themes/THEMES_CATALOG#按场景选主题) | 创业者、独立产品、小团队 |
-| 做知识库或文档站 | [GitBook / Claude](https://notionnext.tangly1024.com/user-guide/themes/THEMES_CATALOG#按场景选主题) | 开源项目、课程作者、团队文档 |
-| 做导航站或资源聚合 | [Nav 主题](https://notionnext.tangly1024.com/user-guide/themes/nav) | 资源整理者、社群运营者 |
+## 网站地址
 
-## 为什么选择 NotionNext？
+### APPDO 主网站
 
-- **不换写作工具**：文章、分类、标签、封面、菜单仍在 Notion 中维护。
-- **上线路径短**：复制 Notion 模板、Fork 仓库、连接 Vercel，即可部署。
-- **主题选择多**：内置 25 个主题，覆盖博客、文档、作品集、官网、相册、导航站等场景。
-- **适合长期运营**：支持独立域名、SEO、Sitemap、RSS、评论、统计、搜索、广告和邮件订阅。
-- **开源可控**：源码、配置和主题都在自己的仓库里，后续可以继续二次开发。
-- **数据链路清晰**：Notion 负责内容沉淀，站点负责展示和分发，后续可迁移到 Markdown 或其他系统。
+https://appdo.xyz/
 
-## 20 分钟部署路线
+APPDO 主网站用于发布互联网资讯、数字产品介绍、实用教程、网络安全内容、人工智能动态和数字生活指南。
 
-1. 打开 [主题预览站](https://preview.tangly1024.com/) 看最终效果。
-2. 复制 NotionNext 官方 Notion 模板。
-3. Fork 本仓库到自己的 GitHub 账号。
-4. 使用 [Vercel 部署 NotionNext](https://notionnext.tangly1024.com/user-guide/deploy-vercel)。
-5. 在环境变量中填写 Notion 页面 ID 等配置。
-6. 部署成功后，按场景选择主题并补齐域名、评论、统计、搜索等功能。
+### 关于 APPDO / 商务合作
 
-新手建议直接从文档站的 [从这里开始](https://notionnext.tangly1024.com/user-guide/start-here) 阅读。
+https://about.appdo.xyz/
 
-## 主题与预览
+该网站主要用于展示：
 
-- 在线切换主题：[preview.tangly1024.com](https://preview.tangly1024.com/)
-- 25 个内置主题：[主题全览](https://notionnext.tangly1024.com/user-guide/themes/THEMES_CATALOG)
-- 仓库内主题文档：[docs/user-guide/themes/](./docs/user-guide/themes/)
+- APPDO 品牌介绍
+- 频道发展历程
+- 内容方向与受众情况
+- 品牌合作案例
+- 商务合作方式
+- 官方频道与社交媒体入口
 
-| 场景 | 优先看 |
-| --- | --- |
-| 个人博客 | `simple`、`hexo`、`nobelium`、`typography` |
-| 文档 / 知识库 | `gitbook`、`claude`、`thoughtlite` |
-| 作品集 / 个人品牌 | `proxio`、`starter`、`landing` |
-| 产品官网 | `starter`、`landing`、`commerce` |
-| 图片 / 摄影 | `photo`、`plog`、`magzine` |
-| 导航站 | `nav` |
+## 关于 APPDO
 
-## 本地开发
+APPDO 数字生活指南创建于 2020 年，最初以 Telegram 频道为主要内容载体，持续分享互联网资讯、数字产品、实用工具和技术观察。
 
-推荐使用 Node 22 和 Yarn 1。Node 20 已无法安装当前依赖（`@ai-sdk/google` 要求 Node >=22），部署平台也需要同步设置为 Node 22。
+随着内容数量和订阅人数增长，APPDO 逐渐发展为由 Telegram 频道、独立网站、专题频道和社交媒体账号组成的数字内容品牌。
 
-```bash
-# 1. 使用 Node 22
-nvm use || nvm install
+目前主要关注以下内容：
 
-# 2. 安装 Yarn
-npm i -g yarn
+- 人工智能与互联网产品
+- 数字工具与效率服务
+- 网络安全与隐私保护
+- VPN、代理网络与跨境互联网
+- 数字金融与全球化服务
+- 软件、硬件与消费电子
+- 开源项目与开发者工具
+- 互联网历史与数字文化
 
-# 3. 安装依赖
-yarn
+## 发展历程
 
-# 4. 启动开发
-yarn dev
-```
+### 2020
 
-常用命令：
+2020 年 2 月 28 日，APPDO 数字生活指南发布第一条消息。
 
-| 命令 | 用途 |
-| --- | --- |
-| `yarn dev` | 启动本地开发 |
-| `yarn build` | 构建生产版本 |
-| `yarn export` | 静态导出 |
-| `yarn docs:site:dev` | 本地预览文档站 |
-| `yarn docs:site:build` | 构建文档站 |
+在随后的 306 个日夜里，频道累计发布 75 篇内容，并获得 953 位订阅者。APPDO 的主要内容方向也在这一阶段逐渐形成。
 
-## 文档入口
+### 2021
 
-自 2026 年起，NotionNext 使用仓库内 Markdown 文档作为主要教程来源，并发布为独立文档站。
+截至 2021 年 1 月 22 日，频道订阅人数达到 2,236 人。
 
-| 内容 | 链接 |
-| --- | --- |
-| 在线文档站 | [notionnext.tangly1024.com](https://notionnext.tangly1024.com) |
-| 新手入口 | [从这里开始](https://notionnext.tangly1024.com/user-guide/start-here) |
-| 配置索引 | [全站功能与配置索引](https://notionnext.tangly1024.com/user-guide/reference/features) |
-| 主题说明 | [25 个主题说明](https://notionnext.tangly1024.com/user-guide/themes/THEMES_CATALOG) |
-| 文档源码 | [docs/](./docs/) |
-| 旧版手册 | [docs.tangly1024.com](https://docs.tangly1024.com/) |
+APPDO 的内容开始从互联网信息分享扩展至产品介绍、使用教程和行业观察。
 
-## 参与社区
+### 2022
 
-NotionNext 主仓库由 GitHub 组织 [notionnext-org](https://github.com/notionnext-org) 维护。欢迎提交问题、补充文档、贡献主题、修复代码或参与讨论。
+2022 年 5 月 10 日，频道订阅人数达到 8,234 人。
 
-| 内容 | 链接 |
-| --- | --- |
-| 参与社区 | [community-participate.md](./docs/user-guide/community-participate.md) |
-| 5.0 愿景与路线图 | [VISION_ROADMAP.md](./docs/developer/VISION_ROADMAP.md) |
-| 贡献指南 | [CONTRIBUTING.zh-CN.md](./CONTRIBUTING.zh-CN.md) |
-| 项目治理 | [GOVERNANCE.zh-CN.md](./GOVERNANCE.zh-CN.md) |
-| 维护者 | [MAINTAINERS.md](./MAINTAINERS.md) |
-| 行为准则 | [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) |
-| 讨论区 | [GitHub Discussions](https://github.com/notionnext-org/NotionNext/discussions) |
+2022 年 9 月 19 日，频道订阅人数达到 12,368 人。
 
-如果你在仓库转让前已克隆旧地址，建议更新远程仓库：
+2022 年 12 月 14 日，频道订阅人数达到 18,602 人。
 
-```bash
-git remote set-url origin https://github.com/notionnext-org/NotionNext.git
-git remote -v
-```
+这一年，APPDO 的内容范围逐渐扩展至数字工具、网络服务、消费科技和全球互联网产品。
 
-## 技术栈
+### 2023—2024
 
-- **框架**：[Next.js](https://nextjs.org)
-- **样式**：[Tailwind CSS](https://www.tailwindcss.cn/)
-- **渲染**：[react-notion-x](https://github.com/NotionX/react-notion-x)
-- **评论**：Twikoo、Giscus、Gitalk、Cusdis、Utterances
-- **部署**：[Vercel](https://vercel.com)
+APPDO 继续完善内容体系，并陆续建立专题栏目、独立网站和外部社交媒体账号。
 
-## 相关项目
+频道开始覆盖人工智能、网络安全、跨境支付、数字金融、软件服务和开源项目等更多领域。
 
-- [Elog](https://github.com/LetTTGACO/elog)：Markdown 批量导出工具，支持组合 Notion、语雀、FlowUs、飞书等写作平台与 Hexo、VitePress、Halo、WordPress 等博客平台。
+### 2025
 
-## 致谢
+截至 2025 年 1 月 23 日，APPDO 数字生活指南订阅人数达到 34,210 人。
 
-感谢 Craig Hart 发起的 Nobelium 项目。
+APPDO 逐渐形成由内容频道、独立网站、社交媒体和专题项目组成的内容网络。
 
-<table><tr align="left">
-  <td align="center"><a href="https://github.com/craigary" title="Craig Hart"><img src="https://avatars.githubusercontent.com/u/10571717" width="64px;" alt="Craig Hart"/></a><br/><a href="https://github.com/craigary" title="Craig Hart">Craig Hart</a></td>
-</tr></table>
+### 2026
 
-感谢每一位参与代码、主题、文档、Issue、Review 与发布维护的贡献者。
+截至 2026 年 7 月：
 
-[![Contributors](https://contrib.rocks/image?repo=notionnext-org/NotionNext)](https://github.com/notionnext-org/NotionNext/graphs/contributors)
+- APPDO 数字生活指南主频道订阅人数接近 40,000
+- 专题频道订阅人数达到 15,000
+- 内容范围进一步扩展至人工智能、网络安全、数字金融和全球互联网服务
+- APPDO 主网站与品牌合作网站持续完善
 
-## 使用声明
+这些数字记录了 APPDO 与读者共同成长的过程。
 
-本项目为免费、公开资源，仅限个人学习和合法站点建设使用。禁止利用本项目发布非法内容或进行违法活动。
+## 技术说明
 
-## License
+本网站由开源项目 **NotionNext** 搭建。
 
-The MIT License.
+NotionNext 是一个以 Notion 为内容管理后台的网站框架，可以将 Notion 页面转换为博客、资讯网站、个人主页或品牌展示网站。
 
-## Project Stars
+本项目主要使用：
 
-[![GitHub stars](https://img.shields.io/github/stars/notionnext-org/NotionNext?style=social)](https://github.com/notionnext-org/NotionNext/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/notionnext-org/NotionNext?style=social)](https://github.com/notionnext-org/NotionNext/forks)
+- NotionNext
+- Next.js
+- React
+- Notion
+- GitHub
+- Vercel
 
-Live star-history charts are temporarily unavailable because GitHub now restricts historical stargazer data to repository owners and collaborators.
+网站内容在 Notion 中进行维护，前端页面通过 NotionNext 获取并展示对应数据。
+
+## NotionNext
+
+NotionNext 项目地址：
+
+https://github.com/tangly1024/NotionNext
+
+本项目基于 NotionNext 进行配置和定制，主要调整内容包括：
+
+- APPDO 品牌信息
+- 网站导航
+- 首页内容
+- 品牌时间线
+- 商务合作页面
+- 网站域名
+- 页面主题
+- 页脚信息
+- SEO 配置
+- 社交媒体入口
+
+NotionNext 相关功能、部署方法和配置说明，请参考其官方项目文档。
+
