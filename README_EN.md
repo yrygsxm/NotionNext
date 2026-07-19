@@ -1,111 +1,164 @@
-# Free Installation and Usage Guide
+<div align="center">
 
-Click here to access the help documentation: NotionNext Help Manual - (Completely Free)
+# APPDO Digital Life Guide
 
-## Rights Statement
+### APPDO Brand Introduction and Partnership Website
 
-This project's tutorial is a free and open resource intended solely for personal learning use. It is strictly prohibited for any individual or organization to use this tutorial for commercial purposes, including but not limited to direct sales, indirect charges, or any other forms of profit. When reproducing, copying, or sharing this tutorial, the author's information must be retained, and the source clearly cited.
+Documenting changes in the digital world and sharing noteworthy products, services, and internet stories.
 
-This project only offers paid consultation services authorized by the author's team. Please be vigilant against fraud. Any unauthorized paid services may be subject to legal risks.
+[Main Website](https://appdo.xyz/) · [About APPDO / Partnerships](https://about.appdo.xyz/)
 
-You can set up your personal website in just a few minutes. Here is the link to my free tutorial:
+</div>
 
-# NotionNext
+---
 
-<p>
-  <a aria-label="GitHub commit activity" href="https://github.com/notionnext-org/NotionNext/commits/main" title="GitHub commit activity">
-    <img src="https://img.shields.io/github/commit-activity/m/notionnext-org/NotionNext?style=for-the-badge"/>
-  </a>
-  <a aria-label="GitHub contributors" href="https://github.com/notionnext-org/NotionNext/graphs/contributors" title="GitHub contributors">
-    <img src="https://img.shields.io/github/contributors/notionnext-org/NotionNext?color=orange&style=for-the-badge"/>
-  </a>
-  <a aria-label="Build status" href="#" title="Build status">
-    <img src="https://img.shields.io/github/deployments/notionnext-org/NotionNext/Production?logo=Vercel&style=for-the-badge"/>
-  </a>
-  <a aria-label="Powered by Vercel" href="https://vercel.com?utm_source=Craigary&utm_campaign=oss" title="Powered by Vercel">
-    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" height="28"/>
-  </a>
-</p>
+## Project Introduction
 
+This is the official brand introduction and partnership website for **APPDO Digital Life Guide**.
 
-[中文文档](./README.md) | README in English
+The website presents APPDO’s brand positioning, development history, content focus, audience data, partnership portfolio, and contact information.
 
-<hr/>
+It is built with the open-source blogging and website framework **NotionNext**, with Notion serving as the content management system. GitHub is used for source code management, while Vercel handles website deployment.
 
-A static blog system built with NextJS and Notion API, deployed on Vercel. Designed for Notion and all creators.
+This repository contains the website’s source code and configuration files for learning, discussion, and secondary development.
 
-**Repository hosting:** The main repository is maintained by the GitHub organization **[notionnext-org](https://github.com/notionnext-org)** (canonical: `https://github.com/notionnext-org/NotionNext`). Contributions are welcome; see the org page for collaboration. If you cloned before the transfer, run `git remote set-url origin https://github.com/notionnext-org/NotionNext.git` and verify with `git remote -v`.
+## Website Addresses
 
-## Community
+### APPDO Main Website
 
-| | |
-| --- | --- |
-| **Participate** | [community-participate.md](./docs/user-guide/community-participate.md) · [Discussions](https://github.com/notionnext-org/NotionNext/discussions) |
-| **Contributing** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
-| **Governance** | [GOVERNANCE.md](./GOVERNANCE.md) · [MAINTAINERS.md](./MAINTAINERS.md) |
-| **Code of Conduct** | [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) |
-| **Docs site** | [notionnext.tangly1024.com](https://notionnext.tangly1024.com) |
+https://appdo.xyz/
 
-## 3-Minute Quick Start
+The APPDO main website publishes internet news, digital product introductions, practical tutorials, cybersecurity content, artificial intelligence updates, and digital lifestyle guides.
 
-```bash
-# 1) Use Node 22 (nvm recommended; Node 20 cannot install current dependencies)
-nvm use || nvm install
+### About APPDO / Partnerships
 
-# 2) Install Yarn if needed
-npm i -g yarn
+https://about.appdo.xyz/
 
-# 3) Install dependencies and start dev server
-yarn
-yarn dev
-```
+This website mainly presents:
 
-Common commands:
+- APPDO brand information
+- Channel development history
+- Content focus and audience profile
+- Brand partnership portfolio
+- Partnership opportunities
+- Official channels and social media accounts
 
-- Local development: `yarn dev`
-- Production build: `yarn build`
-- Static export: `yarn export`
+## About APPDO
 
-Note: local workflow stays simple (`yarn`), while lockfile consistency is enforced in CI.
+APPDO Digital Life Guide was founded in 2020.
 
-## Developer Docs Navigation
+It initially operated through a Telegram channel, sharing internet news, digital products, practical tools, and technology observations.
 
-To help new contributors get started quickly, the project keeps docs bilingual with clear entry points:
+As its content library and subscriber base grew, APPDO developed into a digital media brand consisting of Telegram channels, independent websites, topic-focused channels, and social media accounts.
 
-- [Docs index (中文)](./docs/README.md)
-- [Developer docs (English)](./docs/developer/README.en.md)
-- [Contribution (中文)](./CONTRIBUTING.zh-CN.md)
-- [Contribution Guide (English)](./CONTRIBUTING.md)
+APPDO currently focuses on:
 
-## Themes & preview
+- Artificial intelligence and internet products
+- Digital tools and productivity services
+- Cybersecurity and privacy protection
+- VPNs, proxy networks, and cross-border internet access
+- Digital finance and global online services
+- Software, hardware, and consumer electronics
+- Open-source projects and developer tools
+- Internet history and digital culture
 
-- **Live theme switcher**: [preview.tangly1024.com](https://preview.tangly1024.com/)
-- **All 25 themes**: [THEMES_CATALOG.md](./docs/user-guide/themes/THEMES_CATALOG.md)
-- New theme? See [CONTRIBUTING.md](./CONTRIBUTING.md) and [Theme Migration Guide](./docs/developer/THEME_MIGRATION_GUIDE.md)
+## Development Timeline
 
-## Acknowledgements
+### 2020
 
-Special thanks to Craig Hart for initiating the Nobelium project.
+On February 28, 2020, APPDO Digital Life Guide published its first message.
 
-<table><tr align="left">
-  <td align="center"><a href="https://github.com/craigary" title="Craig Hart"><img src="https://avatars.githubusercontent.com/u/10571717" width="64px;"alt="Craig Hart"/></a><br/><a href="https://github.com/craigary" title="Craig Hart">Craig Hart</a></td>
-</tr></table>
+Over the following 306 days, the channel published 75 posts and gained 953 subscribers. APPDO’s core content direction gradually took shape during this period.
 
-## Contributors
+### 2021
 
-This project exists thanks to all the people who contribute.
+By January 22, 2021, the channel had reached 2,236 subscribers.
 
-[![Contributors](https://contrib.rocks/image?repo=notionnext-org/NotionNext)](https://github.com/notionnext-org/NotionNext/graphs/contributors)
+APPDO’s content began expanding from internet news sharing to product introductions, practical tutorials, and industry observations.
 
-## Technologies Used
+### 2022
 
-- **Technical Framework**: [Next.js](https://nextjs.org)
-- **Styles**: [Tailwind CSS](https://www.tailwindcss.cn/)
-- **Rendering Tool**: [React-notion-x](https://github.com/NotionX/react-notion-x)
-- **COMMENT**: [Twikoo](https://github.com/imaegoo/twikoo), [Giscus](https://giscus.app/zh-CN), [Gitalk](https://gitalk.github.io), [Cusdis](https://cusdis.com), [Utterances](https://utteranc.es)
-- **ICON**: [Fontawesome](https://fontawesome.com/v6/icons/)
+By May 10, 2022, the channel had reached 8,234 subscribers.
 
+By September 19, 2022, the channel had reached 12,368 subscribers.
 
-## License
+By December 14, 2022, the channel had reached 18,602 subscribers.
 
-The MIT License.
+During this year, APPDO expanded its coverage to digital tools, online services, consumer technology, and global internet products.
+
+### 2023–2024
+
+APPDO continued developing its content system and launched additional topic sections, independent websites, and external social media accounts.
+
+Its coverage expanded to artificial intelligence, cybersecurity, cross-border payments, digital finance, software services, and open-source projects.
+
+### 2025
+
+By January 23, 2025, APPDO Digital Life Guide had reached 34,210 subscribers.
+
+APPDO gradually formed a broader content network consisting of publishing channels, independent websites, social media accounts, and topic-focused projects.
+
+### 2026
+
+As of July 2026:
+
+- The main APPDO Digital Life Guide channel had nearly 40,000 subscribers
+- APPDO’s topic-focused channel had reached 15,000 subscribers
+- Coverage continued expanding across artificial intelligence, cybersecurity, digital finance, and global internet services
+- The APPDO main website and brand partnership website continued to evolve
+
+These milestones reflect the long-term growth of APPDO and its community.
+
+## Technical Overview
+
+This website is built with the open-source project **NotionNext**.
+
+NotionNext is a website framework that uses Notion as its content management backend. It can transform Notion pages into blogs, news websites, personal websites, or brand presentation websites.
+
+The project mainly uses:
+
+- NotionNext
+- Next.js
+- React
+- Notion
+- GitHub
+- Vercel
+
+Website content is maintained in Notion, while the frontend retrieves and displays the corresponding data through NotionNext.
+
+## NotionNext
+
+NotionNext repository:
+
+https://github.com/tangly1024/NotionNext
+
+This project is based on NotionNext and includes custom configuration for:
+
+- APPDO brand information
+- Website navigation
+- Homepage content
+- Brand timeline
+- Partnership pages
+- Custom domains
+- Website theme
+- Footer information
+- SEO configuration
+- Social media links
+
+For NotionNext features, deployment instructions, and configuration documentation, please refer to the official NotionNext repository.
+
+## Related Links
+
+- APPDO Main Website: https://appdo.xyz/
+- About APPDO / Partnerships: https://about.appdo.xyz/
+- NotionNext: https://github.com/tangly1024/NotionNext
+
+---
+
+<div align="center">
+
+**APPDO Digital Life Guide**
+
+Documenting the internet and the digital world around us.
+
+</div>
