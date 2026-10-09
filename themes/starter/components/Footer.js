@@ -1,5 +1,6 @@
 import { starterConfig } from '../config'
 import SocialButton from '@/themes/fukasawa/components/SocialButton'
+import AnalyticsBusuanzi from '@/components/AnalyticsBusuanzi'
 import { Logo } from './Logo'
 import { SVGFooterCircleBG } from './svg/SVGFooterCircleBG'
 import SmartLink from '@/components/SmartLink'
@@ -130,17 +131,18 @@ export const Footer = props => {
                 </div>
               </div>
               <div className='w-full px-4 md:w-1/3 lg:w-1/2'>
-                <div className='my-1 flex justify-center md:justify-end'>
+                <div className='my-1 flex flex-wrap justify-center md:justify-end items-center gap-x-3'>
                   <p className='text-base text-gray-7'>
                     Designed and Developed by
                     <a
-                      href='https://github.com/tangly1024/NotionNext'
+                      href='https://github.com/notionnext-org/NotionNext'
                       rel='nofollow noopner noreferrer'
                       target='_blank'
                       className='px-1 text-gray-1 hover:underline'>
                       NotionNext {starterConfig('VERSION')}
                     </a>
                   </p>
+                  <AnalyticsBusuanzi />
                 </div>
               </div>
             </div>
