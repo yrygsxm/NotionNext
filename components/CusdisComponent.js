@@ -17,10 +17,13 @@ const CusdisComponent = ({ frontMatter }) => {
   }, [isDarkMode, lang])
 
   const loadCusdis = async () => {
-    await loadExternalResource(langCDN, 'js')
-    await loadExternalResource(src, 'js')
-
-    window?.CUSDIS?.initial()
+    // The optional translation endpoint can fail while the widget still works.
+    // Load both independently so a language outage cannot hide the comment form.
+    const [, widget] = await Promise.allSettled([
+      loadExternalResource(langCDN, 'js'),
+      loadExternalResource(src, 'js')
+    ])
+    if (widget.status === 'fulfilled') window?.CUSDIS?.initial()
   }
 
   return <div id="cusdis_thread"
