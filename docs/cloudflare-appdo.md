@@ -24,6 +24,8 @@ The build reads Notion sequentially to reduce upstream rate limiting. It fails
 instead of publishing an empty site or missing article bodies. Search is a
 browser-side index of public, published, unprotected articles; it does not invoke
 a Worker or require an Algolia account. Invalid routes use a static 404 page.
+The export explicitly excludes all paths from Pages Functions invocation. The
+inherited, unconfigured AI API examples are inactive on this static deployment.
 
 ## Publish content changes
 

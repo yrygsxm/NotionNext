@@ -69,6 +69,12 @@ if (missing.length)
   throw new Error(`Article bodies missing: ${missing.join(', ')}`)
 
 fs.writeFileSync(path.join(output, 'search-index.json'), JSON.stringify(index))
+// This blog uses static assets only. Keep inherited AI API stubs from invoking
+// Pages Functions, including when an automated client probes those endpoints.
+fs.writeFileSync(
+  path.join(output, '_routes.json'),
+  JSON.stringify({ version: 1, include: ['/*'], exclude: ['/*'] })
+)
 fs.writeFileSync(
   path.join(output, '_redirects'),
   [
