@@ -81,6 +81,14 @@ fs.writeFileSync(
     '/feed /rss/feed.xml 301',
     '/search/:keyword/page/:page /search?s=:keyword 302',
     '/search/:keyword /search?s=:keyword 302',
+    ...[
+      ['必看精选', '推荐'],
+      ['热门文章', '新闻'],
+      ['实用教程', '教程']
+    ].map(
+      ([from, to]) =>
+        `/tag/${encodeURIComponent(from)} /tag/${encodeURIComponent(to)} 301`
+    ),
     ''
   ].join('\n')
 )
