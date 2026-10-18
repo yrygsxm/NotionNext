@@ -204,7 +204,7 @@ const LayoutSearch = props => {
         ) : (
           <div id='posts-wrapper'>
             {siteConfig('POST_LIST_STYLE') === 'page' ? (
-              <BlogPostListPage {...props} />
+              <BlogPostListPage {...props} disablePagination={props.staticSearch} />
             ) : (
               <BlogPostListScroll {...props} />
             )}

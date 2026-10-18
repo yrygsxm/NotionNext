@@ -79,7 +79,7 @@ export async function getStaticPaths() {
     paths: tagNames.map(tag => ({
       params: { tag }
     })),
-    fallback: true
+    fallback: process.env.EXPORT === 'true' ? false : true
   }
 }
 

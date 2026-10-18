@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useImperativeHandle, useRef, useState } from 'react'
 import { useGlobal } from '@/lib/global'
+import { siteConfig } from '@/lib/config'
 
 const SearchInput = props => {
   const { currentSearch, cRef, className } = props
@@ -23,7 +24,10 @@ const SearchInput = props => {
     const key = searchInputRef.current.value
     if (key && key !== '') {
       setLoadingState(true)
-      router.push({ pathname: '/search/' + key }).then(r => {
+      const target = siteConfig('STATIC_SEARCH')
+        ? { pathname: '/search', query: { s: key } }
+        : { pathname: '/search/' + key }
+      router.push(target).finally(() => {
         setLoadingState(false)
       })
       // location.href = '/search/' + key
@@ -57,11 +61,11 @@ const SearchInput = props => {
       setShowClean(false)
     }
   }
-  function lockSearchInput () {
+  function lockSearchInput() {
     lockRef.current = true
   }
 
-  function unLockSearchInput () {
+  function unLockSearchInput() {
     lockRef.current = false
   }
 
@@ -69,7 +73,7 @@ const SearchInput = props => {
     <div className={'flex w-full rounded-lg ' + className}>
       <input
         ref={searchInputRef}
-        type="text"
+        type='text'
         className={
           'outline-none w-full text-sm pl-5 rounded-lg transition focus:shadow-lg dark:text-gray-300 font-light leading-10 text-black bg-white dark:bg-gray-500'
         }
@@ -83,7 +87,7 @@ const SearchInput = props => {
       />
 
       <div
-        className="-ml-8 cursor-pointer  float-right items-center justify-center py-2"
+        className='-ml-8 cursor-pointer  float-right items-center justify-center py-2'
         onClick={handleSearch}
       >
         <i
@@ -94,9 +98,9 @@ const SearchInput = props => {
       </div>
 
       {showClean && (
-        <div className="-ml-12 cursor-pointer float-right items-center justify-center py-2">
+        <div className='-ml-12 cursor-pointer float-right items-center justify-center py-2'>
           <i
-            className="hover:text-black transform duration-200 text-gray-400 dark:text-gray-300 cursor-pointer fas fa-times"
+            className='hover:text-black transform duration-200 text-gray-400 dark:text-gray-300 cursor-pointer fas fa-times'
             onClick={cleanSearch}
           />
         </div>

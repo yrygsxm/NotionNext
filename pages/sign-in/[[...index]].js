@@ -43,7 +43,7 @@ export function getStaticPaths() {
       { params: { index: [] } }, // 使 /sign-in 路径可访问
       { params: { index: ['factor-one'] } } // 明确 sign-in 生成路径
     ],
-    fallback: 'blocking' // 使用 'blocking' 模式让未生成的路径也能正确响应
+    fallback: process.env.EXPORT === 'true' ? false : 'blocking' // 使用 'blocking' 模式让未生成的路径也能正确响应
   }
 }
 

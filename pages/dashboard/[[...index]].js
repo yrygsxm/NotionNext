@@ -49,7 +49,7 @@ export const getStaticPaths = () => {
       { params: { index: ['order'] } },
       { params: { index: ['affiliate'] } }
     ],
-    fallback: 'blocking' // 或者 true，阻塞式渲染
+    fallback: process.env.EXPORT === 'true' ? false : 'blocking' // 或者 true，阻塞式渲染
   }
 }
 

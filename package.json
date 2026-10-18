@@ -63,7 +63,8 @@
     "translate:all": "node scripts/translate/index.js --batch",
     "translate:check": "node scripts/translate/index.js --check-drift",
     "translate:backfill": "node scripts/translate/index.js --backfill",
-    "translate:diagnose": "node scripts/translate/index.js --diagnose"
+    "translate:diagnose": "node scripts/translate/index.js --diagnose",
+    "build:cloudflare": "cross-env BUILD_PREFETCH_ENABLED=true BUILD_PREFETCH_CONCURRENCY=1 NOTION_BUILD_RATE_MAX_PER_MINUTE=30 NOTION_BUILD_RATE_MIN_INTERVAL_MS=2000 STATIC_PAGE_GENERATION_TIMEOUT=600 yarn export && node scripts/cloudflare-post-export.cjs"
   },
   "dependencies": {
     "@clerk/localizations": "^3.37.8",

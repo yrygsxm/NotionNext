@@ -194,6 +194,7 @@ function getOutput() {
 }
 
 const nextConfig = {
+  outputFileTracingRoot: __dirname,
   eslint: {
     ignoreDuringBuilds: true
   },
@@ -442,6 +443,7 @@ const nextConfig = {
   }
   ,
   experimental: {
+    ...(isExport() ? { cpus: 2, staticGenerationMaxConcurrency: 1 } : {}),
     // cpus: 1,
     scrollRestoration: true,
     // 性能优化实验性功能

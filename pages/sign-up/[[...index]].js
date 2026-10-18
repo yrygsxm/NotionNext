@@ -42,7 +42,7 @@ export function getStaticPaths() {
       { params: { index: [] } }, // 使 /sign-up 路径可访问
       { params: { index: ['sign-up'] } } // 明确 sign-up 生成路径
     ],
-    fallback: 'blocking' // 使用 'blocking' 模式让未生成的路径也能正确响应
+    fallback: process.env.EXPORT === 'true' ? false : 'blocking' // 使用 'blocking' 模式让未生成的路径也能正确响应
   }
 }
 export default SignUp
