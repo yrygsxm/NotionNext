@@ -25,6 +25,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import BlogPostArchive from './components/BlogPostArchive'
 import BlogPostListPage from './components/BlogPostListPage'
+import SailyGuideLinks from './components/SailyGuideLinks'
 import BlogPostListScroll from './components/BlogPostListScroll'
 import CategoryBar from './components/CategoryBar'
 import FloatTocButton from './components/FloatTocButton'
@@ -142,6 +143,7 @@ const LayoutIndex = props => {
     <div id='post-outer-wrapper' className='px-5 md:px-0'>
       {/* 文章分类条 */}
       <CategoryBar {...props} />
+      <SailyGuideLinks compact />
       {siteConfig('POST_LIST_STYLE') === 'page' ? (
         <BlogPostListPage {...props} />
       ) : (
@@ -311,6 +313,7 @@ const LayoutSlug = props => {
                 <AISummary aiSummary={post.aiSummary} />
                 <WWAds orientation='horizontal' className='w-full' />
                 {post && <NotionPage post={post} />}
+                {post.slug === 'article/Saily' && <SailyGuideLinks />}
                 <WWAds orientation='horizontal' className='w-full' />
               </section>
 
