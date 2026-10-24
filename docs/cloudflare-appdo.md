@@ -34,6 +34,21 @@ and retry a production deployment. This rebuilds from the current Notion content
 Code commits to the production branch also trigger builds automatically. A failed
 build does not replace the previous successful deployment.
 
+## Sitemap index
+
+The post-export step publishes `/sitemap.xml` as an index of three maps:
+`https://appdo.xyz/sitemap-main.xml`, `https://saily.appdo.xyz/sitemap.xml`, and
+`https://plasma.appdo.xyz/sitemap.xml`. The main-site map is deduplicated, URLs
+are encoded and XML-escaped, and entries without an exported HTML page are
+excluded. The child sites keep their own maps and modification dates, so their
+future updates do not require rebuilding the blog. The root `robots.txt` also
+advertises all three entry points.
+
+Cross-site sitemap submission requires verified ownership of the referenced
+sites. The existing `appdo.xyz` Search Console Domain property covers the root
+and both subdomains. Submit the root index in that property and inspect actual
+processing results; an HTTP 200 response alone is not proof of indexing.
+
 Do not schedule whole-site builds every hour: that exceeds the Free plan's
 500-build monthly allowance. No recurring rebuild schedule is configured here.
 

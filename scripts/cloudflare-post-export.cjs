@@ -1,5 +1,6 @@
 const fs = require('node:fs')
 const path = require('node:path')
+const { writeSitemapIndex } = require('./build-sitemap-index.cjs')
 
 function walk(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
@@ -116,6 +117,7 @@ for (const name of [
   if (!fs.existsSync(path.join(output, name)))
     throw new Error(`Missing required static asset: ${name}`)
 }
+const sitemapSummary = writeSitemapIndex(output)
 const finalFiles = walk(output)
 if (finalFiles.length > 20000)
   throw new Error(`Pages Free file limit exceeded: ${finalFiles.length}`)
@@ -127,6 +129,7 @@ console.log(
   JSON.stringify({
     staticSearchArticles: Object.keys(index).length,
     validatedArticles: expectedPosts.length,
+    sitemap: sitemapSummary,
     files: finalFiles.length
   })
 )
