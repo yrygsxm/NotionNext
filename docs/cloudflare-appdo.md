@@ -36,17 +36,20 @@ build does not replace the previous successful deployment.
 
 ## Sitemap index
 
-The post-export step publishes `/sitemap.xml` as an index of three maps:
+The post-export step publishes `/sitemap.xml` as an index of four maps:
 `https://appdo.xyz/sitemap-main.xml`, `https://saily.appdo.xyz/sitemap.xml`, and
-`https://plasma.appdo.xyz/sitemap.xml`. The main-site map is deduplicated, URLs
+`https://plasma.appdo.xyz/sitemap.xml`, plus `https://appdo.xyz/sitemap-about.xml`.
+The About map is centrally hosted and lists `https://about.appdo.xyz/`, its single
+public page. Its client-side language switch does not create additional URLs.
+No modification date is guessed for that page. The main-site map is deduplicated, URLs
 are encoded and XML-escaped, and entries without an exported HTML page are
 excluded. The child sites keep their own maps and modification dates, so their
 future updates do not require rebuilding the blog. The root `robots.txt` also
-advertises all three entry points.
+advertises all four entry points.
 
 Cross-site sitemap submission requires verified ownership of the referenced
 sites. The existing `appdo.xyz` Search Console Domain property covers the root
-and both subdomains. Submit the root index in that property and inspect actual
+and all three subdomains. Submit the root index in that property and inspect actual
 processing results; an HTTP 200 response alone is not proof of indexing.
 
 Do not schedule whole-site builds every hour: that exceeds the Free plan's

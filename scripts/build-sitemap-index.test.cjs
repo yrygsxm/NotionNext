@@ -17,7 +17,7 @@ function fixture(t, extra = '') {
   return dir
 }
 
-test('indexes all three sites, deduplicates canonical URLs and excludes missing HTML', t => {
+test('indexes all four sites, deduplicates canonical URLs and excludes missing HTML', t => {
   const dir = fixture(t)
   const summary = writeSitemapIndex(dir)
   assert.equal(summary.mainURLs, 5)
@@ -27,11 +27,15 @@ test('indexes all three sites, deduplicates canonical URLs and excludes missing 
   assert.match(main, /article\/%20space%20&amp;%20test/)
   assert.doesNotMatch(main, /\/missing/)
   const index = fs.readFileSync(path.join(dir, 'sitemap.xml'), 'utf8')
-  assert.equal((index.match(/<sitemap>/g) || []).length, 3)
+  assert.equal((index.match(/<sitemap>/g) || []).length, 4)
   for (const url of summary.sitemaps) assert.ok(index.includes(`<loc>${url}</loc>`))
+  const about = fs.readFileSync(path.join(dir, 'sitemap-about.xml'), 'utf8')
+  assert.ok(about.includes('<loc>https://about.appdo.xyz/</loc>'))
+  assert.equal((about.match(/<url>/g) || []).length, 1)
+  assert.doesNotMatch(about, /<lastmod>/)
   const robots = fs.readFileSync(path.join(dir, 'robots.txt'), 'utf8')
   assert.ok(robots.includes('Disallow: /private/'))
-  assert.equal((robots.match(/^Sitemap:/gm) || []).length, 3)
+  assert.equal((robots.match(/^Sitemap:/gm) || []).length, 4)
 })
 
 test('rejects unexpected hosts instead of silently publishing an invalid cross-site URL list', t => {

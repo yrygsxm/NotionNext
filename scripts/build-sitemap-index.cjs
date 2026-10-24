@@ -4,7 +4,8 @@ const path = require('node:path')
 const namespace = 'http://www.sitemaps.org/schemas/sitemap/0.9'
 const relatedSitemaps = [
   'https://saily.appdo.xyz/sitemap.xml',
-  'https://plasma.appdo.xyz/sitemap.xml'
+  'https://plasma.appdo.xyz/sitemap.xml',
+  'https://appdo.xyz/sitemap-about.xml'
 ]
 const escapeXml = value => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;')
 const unescapeXml = value => value.replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&')
@@ -44,6 +45,10 @@ function writeSitemapIndex(directory) {
   const urls = [...entries].map(([url, {lastmod}]) => `  <url><loc>${escapeXml(url)}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>`).join('\n')
   const main = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="${namespace}">\n${urls}\n</urlset>\n`
   fs.writeFileSync(path.join(output, 'sitemap-main.xml'), main)
+  // About is a single public page; its language switch does not create URLs.
+  // Central hosting is covered by the verified appdo.xyz Domain property.
+  const about = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="${namespace}">\n  <url><loc>https://about.appdo.xyz/</loc></url>\n</urlset>\n`
+  fs.writeFileSync(path.join(output, 'sitemap-about.xml'), about)
   const sitemaps = ['https://appdo.xyz/sitemap-main.xml', ...relatedSitemaps]
   const index = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="${namespace}">\n${sitemaps.map(url => `  <sitemap><loc>${escapeXml(url)}</loc></sitemap>`).join('\n')}\n</sitemapindex>\n`
   fs.writeFileSync(path.join(output, 'sitemap.xml'), index)
